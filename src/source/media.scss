@@ -1,3 +1,26 @@
+
+//свойства для mozila
+@-moz-document url-prefix() {
+  .container-my .col .proguct-cart{
+      &::before{
+          left: -25px;
+      }
+  }
+  }
+//свойства для ei11
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .container-my{
+          margin-top: 10vh;
+      }
+      .container-my .col .proguct-cart::before{
+          width: 70px;
+          top: 25px;
+          left: -9px;
+      }
+  }
+
+
+// медиа запросы
 @media (max-width: 1024px) {
   .col {
     margin-bottom: 20px;

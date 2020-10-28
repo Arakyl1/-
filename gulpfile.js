@@ -38,7 +38,7 @@ function image() {
       return gulp.src(style)
       .pipe(concat('style.scss'))
       .pipe(autoprefixer({
-        Browserslist: [' last 2 versions'],
+        Browserslist: ['since 2015'],
         cascade: false
         }))
       .pipe(sass().on('error', sass.logError))

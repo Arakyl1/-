@@ -6,7 +6,7 @@ $(carts).click(function () {
   if ($(this).parents().hasClass("not-on-sale")) {
   } else  if ($(this).parents().hasClass("active")) {
     $(this).parents().toggleClass("active");
-    $(this).toggleClass ("active");
+    $(carts).addClass ("active");
   } 
   else {
     $(this).parents().addClass("active");
@@ -16,7 +16,7 @@ $(carts).click(function () {
 
 $(buttonSey).click(function () { 
   $(this).parents(".col").addClass("active");
-  $(carts, this).addClass("active");
+  $(carts).addClass("active");
 });
 
 $(col).on('mouseover', function(){
