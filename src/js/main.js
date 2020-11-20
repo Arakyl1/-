@@ -3,20 +3,15 @@ let col = $(".col");
 let buttonSey = $(".additional-info a");
 
 
-
 $(carts).click(function () { 
   if ($(this).parents().hasClass("not-on-sale")) {
     $(this).parents(".col").toggleClass("soldOut");
-  } else  if ($(this).parents().hasClass("active")) {
-    $(this).parents(".col").removeClass("active");
-    $(this).removeClass ("active");
+  } else {
+    $(this).parents(".col").toggleClass("active");
+    $(this).toggleClass ("active");
   } 
-  else {
-    $(this).parents(".col").addClass("active");
-    $(this).addClass("active");
-  }
+  
 });
-
 
 
 $(buttonSey).click(function () { 
@@ -25,7 +20,7 @@ $(buttonSey).click(function () {
   }
 else{
   $(this).parents(".col").addClass("active");
-  $(carts).addClass("active");
+  $(this).parents('.additional-info').prev().addClass("active");
 }
 });
 
