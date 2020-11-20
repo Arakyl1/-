@@ -28,16 +28,11 @@ else{
 
 $(col).on('mouseover', function(){
   if ($(this).hasClass("active")) {
-    if ($(this).children(carts).hasClass("active")) {
       $(".business-name", this).replaceWith("<p class='business-name'>Сказочное заморское яство</p>");
     }
-  }
 });
 $(col).on('mouseout', function(){
   if ($(this).hasClass("active")) {
-    if ($(this).children(carts).hasClass("active")) {
       $(".business-name", this).replaceWith("<p class='business-name' style=' color: #d91667;'>Котэ не одобряет?</p>");
-      
-    }
   }
 });
